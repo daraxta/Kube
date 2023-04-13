@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: imagendocker
+  labels:
+    app: imgdocker
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: imgdocker
+  template:
+    metadata:
+      labels:
+        app: imgdocker
+    spec:
+      containers:
+      - name: imgdocker
+        image: index.docker.io/davidrv17/ejemplo
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+          name: http-web-svc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: imgdocker-service
+spec:
+  selector:
+    app: imgdocker
+  ports:
+  - name: http
+    protocol: TCP
+    port: 80
+    targetPort: http-web-svc
