@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: imgdocker
-        image: index.docker.io/davidrv17/pythonapp:5df8005
+        image: index.docker.io/davidrv17/pythonapp:c78e243
         imagePullPolicy: Always
         ports:
         - containerPort: 80
