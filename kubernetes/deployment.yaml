@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: pythonapp
-        image: index.docker.io/davidrv17/pythonapp:06fb656
+        image: index.docker.io/davidrv17/pythonapp:512e1ae
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
