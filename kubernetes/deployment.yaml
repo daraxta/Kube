@@ -19,21 +19,21 @@ spec:
         image: index.docker.io/davidrv17/pythonapp:e930746
         imagePullPolicy: Always
         env:
-        - name: SSH_PASS
-          valueFrom:
-            secretKeyRef:
-              name: ssh-key
-              key: password
+          - name: SSH_PASS
+            valueFrom:
+              secretKeyRef:
+                name: ssh-key
+                key: password
           - name: SSH_USER
-          valueFrom:
-            secretKeyRef:
-              name: ssh-user
-              key: password
+            valueFrom:
+              secretKeyRef:
+                name: ssh-key
+                key: user
           - name: SSH_IP
-          valueFrom:
-            secretKeyRef:
-              name: ssh-ip
-              key: password
+            valueFrom:
+              secretKeyRef:
+                name: ssh-key
+                key: ip
         ports:
         - containerPort: 5000
 ---
