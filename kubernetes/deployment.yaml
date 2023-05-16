@@ -48,5 +48,4 @@ spec:
   - name: pythonport
     protocol: TCP
     port: 5000
-    targetPort: 9000
-  type: LoadBalancer
+    
