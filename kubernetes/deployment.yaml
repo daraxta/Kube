@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: pythonapp
-        image: index.docker.io/davidrv17/pythonapp:93cc399
+        image: index.docker.io/davidrv17/pythonapp:e28f78a
         imagePullPolicy: Always
         env:
           - name: SSH_PASS
